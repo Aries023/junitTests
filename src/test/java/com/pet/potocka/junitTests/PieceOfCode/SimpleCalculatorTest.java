@@ -18,4 +18,21 @@ class SimpleCalculatorTest {
         assertEquals(10,calculator.add(3,7));
     }
 
+    @Test
+    void degreeDIf50Plus20(){
+        var calculator = new SimpleCalculator();
+        assertEquals('C',calculator.degree(50+20));
+    }
+
+    @Test
+    void degreeFIf50(){
+        var calculator = new SimpleCalculator();
+        assertEquals('F',calculator.degree(50));
+    }
+
+    @Test
+    void degreeAFor100(){
+        var calculator = new SimpleCalculator();
+        assertEquals('A',calculator.degree(100));
+    }
 }
