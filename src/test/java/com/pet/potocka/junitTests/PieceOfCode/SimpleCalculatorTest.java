@@ -35,4 +35,22 @@ class SimpleCalculatorTest {
         var calculator = new SimpleCalculator();
         assertEquals('A',calculator.degree(100));
     }
+
+    @Test
+    void negativeOneShouldReturnIllegalArgumentException(){
+        var calculator = new SimpleCalculator();
+        assertThrows(IllegalArgumentException.class, ()->
+            calculator.degree(-1)
+        );
+
+    }
+
+    @Test
+    void moreThenOneHundredShouldReturnIllegalArgumentException(){
+        var calculator = new SimpleCalculator();
+        assertThrows(IllegalArgumentException.class, () ->
+            calculator.degree(101)
+        );
+
+    }
 }
