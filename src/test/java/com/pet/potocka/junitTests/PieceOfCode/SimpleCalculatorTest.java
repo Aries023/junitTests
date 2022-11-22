@@ -53,4 +53,10 @@ class SimpleCalculatorTest {
         );
 
     }
+
+    @Test
+    void zeroShouldReturnF (){
+        var calculator = new SimpleCalculator();
+        assertEquals('F',calculator.degree(0));
+    }
 }
